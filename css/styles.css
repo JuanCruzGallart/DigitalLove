@@ -10,6 +10,15 @@ html, body {
     overflow-x:hidden;
 }
 
+.flex-center{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+}
+
 #index-banner{
     height: 1000px;
     width: 100%;
@@ -23,6 +32,7 @@ html, body {
 
 /*Portfolio*/
 #portfolio-banner{
+    background-image: url(../resources/fotos/cacu-tigre-byn.jpg);
     font-size: 110px;
     padding: 400px 0px 0px 50px;
     height: 600px;
@@ -31,7 +41,6 @@ html, body {
     background-position: center;
     margin-bottom: 0px;
     background-attachment:fixed;
-    background-image: url(../resources/fotos/cacu-tigre-byn.jpg);
     box-sizing:content-box;
 }
 #nft-banner{
@@ -45,6 +54,19 @@ html, body {
     background-attachment:fixed;
     background-image: url(../resources/fotos/lucia.jpg);
     text-align: right;
+    box-sizing:content-box;
+}
+
+#prints-banner{
+    font-size: 110px;
+    padding: 400px 0px 0px 50px;
+    height: 600px;
+    width: 100%;
+    background-size:cover;
+    background-position: center;
+    margin-bottom: 0px;
+    background-attachment:fixed;
+    background-image: url(../resources/fotos/teo-mano.jpg);
     box-sizing:content-box;
 }
 
@@ -65,7 +87,7 @@ html, body {
     height: 550px;
     background-size: cover;
     background-attachment: fixed;
-    margin:0px;
+    margin-top: 120px;
 }
 
 header h1{
@@ -186,7 +208,7 @@ button{
     height: 50px;
     font-size: 20px;
     text-align: center;
-    margin: 100px;
+    margin: 50px;
     
 }   
 
@@ -209,13 +231,7 @@ h2{
 }
 
 ul{
-    margin-top: 50px;
-    margin-left: 40px;
-    margin-bottom: 70px;
-    font-size: 20px;
-    background-color: blueviolet;
-    padding: 15px 60px 15px 30px;
-    display: inline-block;
+    margin: 20px;
 }
 
 
@@ -291,51 +307,13 @@ footer a:visited{
 
 /*GRID INDEX*/
 
-.grid-index{
-    display: grid;
-    grid-template-columns: 900px 900px;
-    grid-template-rows: 800px 800px 800px;
-    grid-template-areas: 
-                "foto1 texto1"
-                "texto2 foto2"
-                "foto3 texto3"
-;
-    margin: 40px 
+.card-body{
+    color: black;
 }
-
-.grid-index img{
-    height: 80%;
-}
-
-.grid-index__foto1{
-    grid-area:foto1;
-}
-
-.grid-index__text1{
-    grid-area: texto1;
-    text-align: right;
-
+.img-fluid rounded-start{
+    width: 100%;
 
 }
-
-.grid-index__foto2{
-    grid-area: foto2;
-}
-
-.grid-index__text2{
-    grid-area: texto2;
-    text-align: left;
-}
-
-.grid-index__foto3{
-    grid-area: foto3;
-}
-
-.grid-index__text3{
-    grid-area: texto3;
-    text-align: right;
-}
-
 /*MOBILE*/
 @media only screen and (max-width:400px){
     
