@@ -70,6 +70,19 @@ html, body {
     box-sizing:content-box;
 }
 
+#aboutMe-banner{
+    background-image: url(../resources/fotos/gabi-sabana.jpg);
+    font-size: 110px;
+    padding: 400px 0px 0px 50px;
+    height: 600px;
+    width: 100%;
+    background-size:cover;
+    background-position: center;
+    margin-bottom: 0px;
+    background-attachment:fixed;
+    box-sizing:content-box;
+}
+
 .flexbox-portfolio{
     display: flex;
     flex-direction: row;
@@ -248,45 +261,6 @@ footer a:visited{
 
 
 
-#grid-nfts{
-    display: grid;
-    columns: 1fr 3fr;
-}
-
-.grid_aboutMe{
-    display: grid;
-    grid-template-columns: 2fr 3fr;
-    grid-template-rows: 1fr 2fr;
-    grid-template-areas: 
-                            "titulo foto"
-                            "texto foto";
-    margin: 50px;
-    padding: 50px;
-    border: solid black;
-}
-
-.grid__titulo{
-    grid-area: titulo;
-    text-align: center;
-}
-
-.grid__texto{
-    grid-area: texto;
-    text-align: justify;
-    padding: 0px 70px;
-}
-
-.grid__foto{
-    grid-area: foto;
-    padding: 30px;
-    
-}
-
-#grid___foto_id{
-    height: 606.7px;
-    width: 911px;
-}
-
 
 /*GRID INDEX*/
 
@@ -391,7 +365,7 @@ a{
 
 .navbar-nav{
     margin-top: 0px;
-    padding: 5px;
+    padding: 3px;
 }
 
 @media only screen and (max-width:992px){
@@ -402,4 +376,8 @@ a{
 
 .navbar{
     --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.aria-current{
+
 }
