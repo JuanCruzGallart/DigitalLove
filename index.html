@@ -19,7 +19,7 @@
     
     <body class="body">
       <header id="index-banner">
-        <br><br><br><br><br><br><br><br><br><br><br> <!--No sabia como hacer para que el texto quedara alineado a la derecha y centrado en la imagen de fondo asi que los <br>-->
+        <br><br><br><br><br><br><br><br><br><br><br> <!--me esta dando paja ponerle el padding-->
         <h1>DigitalLove</h1>
         
       </header>
@@ -28,15 +28,36 @@
       <main>
  
 <!--NAV-->
-        <div>
-          <nav>
-            <a href="#../digitalLove.html/index.html" class="btn">Home</a>
-            <a href="./pages/portfolio.html" class="btn">Portfolio</a>
-            <a href="./pages/prints.html" class="btn">Prints</a>
-            <a href="./pages/NFTs.html" class="btn">NFTs</a>
-            <a href="./pages/aboutMe.html" class="btn">About Me</a>        
-          </nav>
-        </div>
+        
+<nav class="navbar navbar-expand-lg bg-body-tertiary" class="navbar bg-dark" data-bs-theme="dark">
+  <div class="container-fluid">
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="btn" class="nav-link active" aria-current="page" href="#" >Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn" class="nav-link" href="./pages/portfolio.html">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn" class="nav-link" href="./pages/prints.html">Prints</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn" class="nav-link" href="./pages/NFTs.html">NFTs</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn" class="nav-link " href="./pages/aboutMe.html">About Me</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
 
 
 

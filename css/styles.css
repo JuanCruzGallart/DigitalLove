@@ -97,20 +97,6 @@ header h1{
     
 }
 
-nav{
-    text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: white;
-    font-size: 18px;
-    background-color: black;
-    padding: 10px;
-    margin-bottom: 100px;
-}
-
-nav a:visited{
-    color: white;
-    text-decoration: none;
-}
 
 header a:visited{
     color: white;
@@ -235,9 +221,6 @@ ul{
 }
 
 
-/*SAMPLE PHOTOS: centrar*/
-.sample{
-}
 
 footer{
     text-align: center;
@@ -402,3 +385,21 @@ a{
   }
 
 
+#navbarNav{
+    justify-content: center;
+}
+
+.navbar-nav{
+    margin-top: 0px;
+    padding: 5px;
+}
+
+@media only screen and (max-width:992px){
+    .btn{
+        margin: 8px;
+    }
+}
+
+.navbar{
+    --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
