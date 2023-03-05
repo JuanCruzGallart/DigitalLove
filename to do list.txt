@@ -1,0 +1,7 @@
+- Multi language, una vez terminado el sitio 
+
+- Galeria responsive con carousel slider para portfolio.html
+
+- Hacer algo con NFTs.html
+
+- Embellecer prints.html

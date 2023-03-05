@@ -18,7 +18,9 @@
     <body class="body">
       
 <!--BANNER-->
-      <header id="portfolio-banner">Portfolio</header>
+      <header id="portfolio-banner">
+        <h1>Portfolio</h1>
+      </header>
         
 
 <!--NAV-->
@@ -51,12 +53,69 @@
         </div>
       </nav>
 
-      </header>
-
 
 
       <main>
 
+<!--GALERIA CON BOOTSTRAP, RESPONSIVE-->
+        <section class="gallery min-vh-100">
+          <div class="container-lg">
+            
+            <div class="row gy-4 row-cols-1 row-cols-sm-2 row-cols-md-3">
+              
+              <div class="col">
+                <img src="../resources/portfolio-fotos_/chiquis-sillon.jpg" class="gallery-item" alt="">
+              </div>
+            
+            
+              <div class="col">
+                <img src="../resources/portfolio-fotos_/combo-pulga.jpg" class="gallery-item" alt="">
+              </div>
+              
+              <div class="col">
+                <img src="../resources/portfolio-fotos_/jo-cumple-maki.JPG" class="gallery-item" alt="">
+              </div>
+              
+              <div class="col">
+                <img src="../resources/portfolio-fotos_/jo-eche.jpg" class="gallery-item" alt="">
+              </div>
+                      
+              <div class="col">
+                <img src="../resources/portfolio-fotos_/lucia-facultadderecho.jpg" class="gallery-item" alt="">
+              </div>
+                        
+              <div class="col">
+                <img src="../resources/portfolio-fotos_/maki-joaco-terraza.jpg" class="gallery-item" alt="">
+              </div>
+                          
+              <div class="col">
+                <img src="../resources/portfolio-fotos_/valentin-facultadderecho.jpg" class="gallery-item" alt="">
+              </div>
+          
+            </div>
+          </div>
+
+        </section>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="gallery-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1> -->
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="../resources/portfolio-fotos_/chiquis-sillon.jpg" class="modal-img" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--GALERIA CON FLEXBOX-->
         <section class="flexbox-portfolio">
           
             <img class="flexbox-portfolio_item" src="../resources/portfolio-fotos_/jo-eche.jpg" alt="joaquina y eche">
@@ -80,10 +139,13 @@
         </section>
 
 
+
       </main>
 
             <!--JAVASCRIPT-->
           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+          
+          <script src="../js/main.js"></script>
           
       </body>
 
