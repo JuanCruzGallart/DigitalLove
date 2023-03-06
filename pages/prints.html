@@ -15,13 +15,35 @@
         
         <header id="prints-banner">Prints</header>
 
-        <nav>
-          <a href="../index.html" class="btn">Home</a>
-          <a href="./portfolio.html" class="btn">Portfolio</a>
-          <a href="#./prints.html" class="btn">Prints</a>
-          <a href="./NFTs.html" class="btn">NFTs</a>
-          <a href="./aboutMe.html" class="btn">About Me</a>
-        </nav>
+        <!--NAV-->
+        
+<nav class="navbar navbar-expand-lg bg-body-tertiary" class="navbar bg-dark" data-bs-theme="dark">
+  <div class="container-fluid">
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="btn" class="nav-link active" aria-current="page" href="../index.html" >Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn" class="nav-link" href="./portfolio.html">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn" class="nav-link" href="#">Prints</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn" class="nav-link" href="./NFTs.html">NFTs</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn" class="nav-link " href="./aboutMe.html">About Me</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
       
         
       </header>
@@ -36,37 +58,64 @@
         <div class="col"></div>
         
         <div class="col">
-
-        <form action="procesar.php" method="post" class="row g-5" >
-        
-          <div class="row-lg">
-            <label for="FormControlInput1" class="form-label">Email address</label>
-            <input type="email" class="form-control-lg" id="FormControlInput1" placeholder="name@example.com">
-          </div>
-
-          <div class="row-lg">
-            <label for="FormControlInput2">Password</label>
-            <input type="password" class="form-control-lg" id="inputPassword" placeholder="Password">
-          </div>
-
-          <div class="row-lg">
-            <label for="formFileMultiple" class="form-label">Upload your images</label>
-            <input class="form-control-lg" type="file" id="formFileMultiple" multiple>
-          </div>
-
-          <div class="row-lg">
-            <label for="form-select-lg" class="form-label">Choose a size format</label>
-            <select class="form-select-lg" aria-label="Default select example">
-              <option selected>?</option>
-              <option value="1">10x15</option>
-              <option value="2">15x20</option>
-              <option value="3">22x15</option>
-            </select>
+          <div class="card text-bg-secondary mt-5" style="max-width: fit-content;">
+            <div class="card-header">Get your prints</div>
+            <div class="card-body">
+              <h5 class="card-title">Please complete this form!</h5>
+              <form class="row g-3">
+                <div class="col-md-6">
+                  <label for="inputEmail4" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="inputEmail4">
+                </div>
+                <div class="col-md-6">
+                  <label for="inputPassword4" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="inputPassword4">
+                </div>
+                <div class="col-12">
+                  <label for="inputAddress" class="form-label">Address</label>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                </div>
+                
+                <div class="col-md-6">
+                  <label for="inputCity" class="form-label">City</label>
+                  <input type="text" class="form-control" id="inputCity">
+                </div>
+                <div class="col-md-4">
+                  <label for="inputState" class="form-label">State</label>
+                  <select id="inputState" class="form-select">
+                    <option selected>Choose...</option>
+                    <option>...</option>
+                  </select>
+                </div>
+                <div class="col-md-2">
+                  <label for="inputZip" class="form-label">Zip</label>
+                  <input type="text" class="form-control" id="inputZip">
+                </div>
+                
+                <div class="col-auto">
+                  <label for="autoSizingSelect">Choose a size format</label>
+                  <select class="form-select" id="autoSizingSelect">
+                    <option selected>Choose...</option>
+                    <option value="1">10x15</option>
+                    <option value="2">15x22</option>
+                    <option value="3">20x30</option>
+                  </select>
+                </div>
+               
+                <div class="col-auto">
+                  <label for="formFileMultiple" class="form-label">Upload your images</label>
+                  <input class="form-control-md" type="file" id="formFileMultiple" multiple>
+                </div>
+                
+                <div class="col-12 flex-container-end">
+                  <button type="submit" class="shadow__btn">Submit</button>
+                </div>
+              
+              </div>
+              </form>
+            </div>
           </div>
           
-        
-        </div>
-      </form>
 
       <div class="col"></div>
 

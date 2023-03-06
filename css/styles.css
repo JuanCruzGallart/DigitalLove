@@ -22,6 +22,7 @@ html, body {
 #index-banner{
     height: 1000px;
     width: 100%;
+    padding: 400px 0px 0px 50px;
     background-size:cover;
     background-position: center;
     margin-bottom: 0px;
@@ -45,7 +46,7 @@ html, body {
 }
 #nft-banner{
     font-size: 110px;
-    padding: 400px 0px 0px 0px;
+    padding: 400px 30px 0px 0px;
     height: 600px;
     width: 100%;
     background-size:cover;
@@ -70,6 +71,20 @@ html, body {
     box-sizing:content-box;
 }
 
+#aboutMe-banner{
+  background-image: url(../resources/fotos/gabi-sabana.jpg);
+  font-size: 110px;
+  padding: 400px 0px 0px 0px;
+  height: 600px;
+  width: 100%;
+  background-size:cover;
+  background-position: center;
+  margin-bottom: 0px;
+  background-attachment:fixed;
+  text-align: right;
+  box-sizing:content-box;
+}
+
 .flexbox-portfolio{
     display: flex;
     flex-direction: row;
@@ -92,7 +107,6 @@ html, body {
 
 header h1{
     font-size: 110px;
-    text-align: right;
     margin-right: 30px;
     
 }
@@ -194,7 +208,7 @@ button{
     height: 50px;
     font-size: 20px;
     text-align: center;
-    margin: 50px;
+    margin: 30px;
     
 }   
 
@@ -202,6 +216,12 @@ button{
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+
+.flex-container-end{
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
 }
 
 h1{
@@ -228,7 +248,7 @@ footer{
     background-color: black;
     color: white;
     padding: 35px;
-    margin-top: 150px;
+    margin-top: 100px;
     
 }
 
@@ -402,4 +422,36 @@ a{
 
 .navbar{
     --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}px;
+    padding: 5px;
+}
+
+@media only screen and (max-width:992px){
+    .btn{
+        margin: 8px;
+    }
+}
+
+.navbar{
+    --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}px;
+    padding: 5px;
+}
+
+@media only screen and (max-width:992px){
+    .btn{
+        margin: 8px;
+    }
+}
+
+.navbar{
+    --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.gallery{
+  padding: 80px 0px
+}
+
+.gallery img{
+  max-width: 100%
 }
