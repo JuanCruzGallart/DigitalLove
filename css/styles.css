@@ -46,12 +46,8 @@ html, body {
     box-sizing:content-box;
 }
 #nft-banner{
-<<<<<<< HEAD
-    padding: 400px 0px 0px 0px;
-=======
     font-size: 110px;
     padding: 400px 30px 0px 0px;
->>>>>>> test
     height: 600px;
     width: 100%;
     background-size:cover;
@@ -138,12 +134,7 @@ html, body {
 
 header, h1{
     font-size: 110px;
-<<<<<<< HEAD
-    text-align: right;
-    margin-right: 100px;
-=======
     margin-right: 30px;
->>>>>>> test
     
 }
 @media only screen and (max-width:778px){
@@ -258,8 +249,6 @@ button{
     justify-content: center;
 }
 
-<<<<<<< HEAD
-=======
 .flex-container-end{
   display: flex;
   flex-direction: row;
@@ -271,7 +260,6 @@ h1{
     padding: 15px;
     
 }
->>>>>>> test
 
 h2{
     font-size: 30px;
@@ -429,14 +417,6 @@ a{
 
 .navbar{
     --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-<<<<<<< HEAD
-}
-
-.aria-current{
-
-=======
-}px;
-    padding: 5px;
 }
 
 @media only screen and (max-width:992px){
@@ -467,5 +447,4 @@ a{
 
 .gallery img{
   max-width: 100%
->>>>>>> test
 }
