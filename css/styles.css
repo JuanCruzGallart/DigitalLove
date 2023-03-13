@@ -21,14 +21,15 @@ html, body {
 
 #index-banner{
     background-image: url(../resources/fotos/weirdShit.jpg);
-    padding: 400px 0px 0px 50px;
+    font-size: 110px;
+    padding: 400px 30px 0px 0px;
     height: 600px;
     width: 100%;
-    padding: 400px 0px 0px 50px;
     background-size:cover;
     background-position: center;
     margin-bottom: 0px;
     background-attachment:fixed;
+    text-align: right;
     box-sizing:content-box;
 }
 
@@ -133,7 +134,7 @@ html, body {
 
 
 header, h1{
-    font-size: 110px;
+    font-size: 7rem;
     margin-right: 30px;
     
 }
@@ -256,7 +257,7 @@ button{
 }
 
 h1{
-    font-size: 55px;
+
     padding: 15px;
     
 }
@@ -448,3 +449,4 @@ a{
 .gallery img{
   max-width: 100%
 }
+
