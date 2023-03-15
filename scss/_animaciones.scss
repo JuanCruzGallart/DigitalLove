@@ -1,0 +1,26 @@
+//  .animate__animated .animate__slideInLeft{
+//      animation: 'animate__fadeInLeft' ;
+//      animation-timing-function: ease-in-out;
+// }
+
+// .card{
+//     .m-5{
+//         .p-2{
+//             .animate__animated {
+//                 .animate__slideInLeft{
+//                     display: inline-block;
+//                     margin: 0 0.5rem;
+                  
+//                     animation: slideInLeft; /* referring directly to the animation's @keyframe declaration */
+//                     animation-timing-function: ease-out;
+//                 } 
+//             } 
+//         } 
+//     } 
+// }  
+  
+
+.animate__fadeIn{
+    animation-delay: 0.5s;
+}
+

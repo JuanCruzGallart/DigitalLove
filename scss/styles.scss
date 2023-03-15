@@ -1,0 +1,146 @@
+@import "navbar";
+@import "buttons";
+@import "banners";
+@import "fuentes";
+@import "colores";
+@import "animaciones";
+
+/*ESTO SE PONE EN TODOS LOS DOCUMENTOS PARA RESETEAR EL DEFAULT DEL BROWSER*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html
+    header{
+        h1{
+            color: white;
+        }
+    }
+    body {
+        max-width: 100%;
+        font-family:$fuente-secundaria;
+        // background-color:  $color-primario;
+        background-image: linear-gradient(to right,$color-primario,$color-cuaternario);
+        // background-image: radial-gradient(ellipse,$color-cuaternario,$color-primario);
+
+            img{
+                border-radius: 15px;
+            }
+
+    footer{
+        font-family: $fuente-secundaria;
+    }
+}
+
+.flex-center{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+}
+
+.gallery{
+    padding: 80px;
+}
+
+.gallery-item{
+    max-width: 100%;
+}
+
+#gallery-modal .modal-img{
+    max-width: 100%;
+}
+
+header, h1{
+    font-size: 7rem;
+    margin-right: 30px;
+    
+}
+@media only screen and (max-width:778px){
+    header{
+
+        h1{
+            font-size: 3rem;
+        }
+    }
+}
+
+header a:visited{
+    color: white;
+    text-decoration: none;
+}
+
+button{
+    height: 50px;
+    font-size: 20px;
+    text-align: center;
+    margin: 30px;
+    
+}   
+
+.flex-container__button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.flex-container-end{
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+h1{
+
+    padding: 15px;
+    
+}
+
+h2{
+    font-size: 30px;
+    padding: 15px;
+    
+}
+
+ul{
+    margin: 20px;
+}
+
+footer{
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 35px;
+    margin-top: 100px;
+    
+}
+
+footer a:visited{
+    color: white;
+    text-decoration: none;
+}
+
+/*GRID INDEX*/
+.card-body{
+    color: black;
+}
+.img-fluid rounded-start{
+    width: 100%;
+
+}
+
+a{
+    margin: 0em 1em;
+}
+
+.gallery{
+  padding: 80px 0px
+}
+
+.gallery img{
+  max-width: 100%
+}
+

@@ -10,6 +10,10 @@
       <link rel="shortcut icon" href="./resources/casca.jpg">     
       <!--BOOTSTRAP-->
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> 
+      <!--ANIMACIONES-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+      <!--Animaciones 2-->
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
       <!--CSS-->
       <link rel="stylesheet" href="./css/styles.css">
       <title>DigitalLove-Portfolio</title>
@@ -19,7 +23,7 @@
     
     <body class="body" >
       <header id="index-banner">
-        <h1>DigitalLove</h1>
+        <h1 class="animate__animated animate__fadeIn animate__slower">DigitalLove</h1>
         
       </header>
       
@@ -28,7 +32,7 @@
  
 <!--NAV-->
         
-<nav class="navbar navbar-expand-lg bg-body-tertiary" class="navbar bg-dark" data-bs-theme="dark">
+<nav class="navbar navbar-expand-lg  bg-body-tertiary navbar bg-dark navegacion"  data-bs-theme="dark">
   <div class="container-fluid">
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,14 +61,10 @@
 </nav>
 
 
-
-
-
 <!--FOTOS-->
-
       <section class="flex-center">
         
-        <div class="card m-5"  style="max-width: 1300px;">
+        <div class="card m-5 p-2" data-aos="fade-right"  style="max-width: 1300px;">
           <div class="row g-0">
             <div class="col-md-8">
               <img src="./resources/fotos/joaco-medialuna-lsd.JPG" class="img-fluid rounded-start" alt="..." >
@@ -78,15 +78,15 @@
           </div>
         </div>
         
-        <div class="card m-5"  style="max-width: 1300px;">
+        <div class="card m-5 p-2" data-aos="fade-left"  style="max-width: 1300px;">
           <div class="row g-0">
-            <div class="col-md-3">
+            <div class="col-md-4">
               <div class="card-body">
                 <h2 class="card-title">Facu y Santi</h2>
                 <p class="card-text">A photograph of Joaquin, a friend of mine, from a weird night</p>
               </div>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-8">
               <img src="./resources/fotos/santi-facu.jpg" class="img-fluid rounded-start" alt="..." >
             </div>
             
@@ -94,7 +94,7 @@
         </div>
 
 
-        <div class="card m-5"  style="max-width: 1300px;">
+        <div class="card m-5 p-2" data-aos="fade-right"  style="max-width: 1300px;">
           <div class="row g-0">
             <div class="col-md-8">
               <img  src="./resources/fotos/lucia.jpg" alt="lucia fumando un cigarrillo" class="img-fluid rounded-start">
@@ -127,7 +127,7 @@
       <h1 id="banner"></h1>
 
 <!--CARD GET PRINTS-->     
-      <div class="flex-center">
+      <div class="flex-center" data-aos="fade-up">
       <div class="card m-5"  style="max-width: 1150px;">
         <div class="row g-0">
           
@@ -161,7 +161,10 @@
     
     <!--JAVASCRIPT-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
     
   <footer>
