@@ -199,9 +199,15 @@ body {
 }
 body img {
   border-radius: 15px;
+  transition: 0.5s;
 }
 body footer {
   font-family: "Roboto Mono";
+}
+
+.gallery img:hover {
+  transform: scale(1.4);
+  z-index: 2;
 }
 
 .flex-center {

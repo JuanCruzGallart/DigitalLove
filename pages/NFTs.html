@@ -4,14 +4,21 @@
     <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      
+      <!--SEO-->
+      <meta name="description" content="Buy my NFT's if you are interested in supporting my work">
+      <meta name="tag" content="DIGITAL, LOVE, DIGITAL LOVE, DIGITALLOVE, PHOTOGRAPHY, PORTFOLIO, PHOTOGRAPH, NFT PHOTOGRAPHY, NFT, PHOTOGRAPHY GALLERY, PHOTOGRAPHY LIFE, ARTIST PORTFOLIO, NFT COMMUNITY, NFT PHOTOGRAPHY COMMUNITY, METAVERSE, NON FUNGIBLE ITEMS">
+      <!--CSS-->
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+      <!--ANIMACIONES-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+      <!--Animaciones 2-->
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
       <link rel="stylesheet" href="../css/styles.css">  
       <title>NFTs</title>
     </head>
     
       <header id="nft-banner">
-      <h1>  NFT's</h1>
+      <h1 class="animate__animated animate__fadeIn animate__slower">  NFT's</h1>
       </header>
        
       <body class="body">      
@@ -46,23 +53,27 @@
 </nav>
       
     
-    <section class="flex-center">
-      <div class="container-lg">
-
-        <div class="row-cols-1 row-cols-sm-2">
-          
-          <div class="col-6">
-            <h1>OpenSea</h1> 
-          </div> 
-         
-          <div class="col-6">
-            <h1>Twitter</h1>
+    <section>
+      <div class="flex-center" data-aos="fade-up">
+        <div class="card m-5 p-2"  style="max-width: 1150px;">
+          <div class="row g-0">
+            
+            <div class="col-md-4">
+              <div class="card-body">
+                <h2 class="card-title">OpenSea</h2>
+                <h5 class="card-text">
+                  Take a look at the pieces I currently have for sale. 
+              </h5>
+              <br>
+              <h5 class="card-text">
+                Be the first collector of my 1/1s</h5>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <img  src="../resources/opensea.png" alt="opensea logo" class="img-fluid rounded-start">
+            </div>
           </div>
-        
-          <div class="col-m6">
-            <img src="../resources/fotos/opensea.png" alt="my opensea page" width="390 px" height="851 px">
-          </div>
-        
+        </div>   
       </div>
           
           
@@ -71,6 +82,10 @@
 
     <!--JAVASCRIPT-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 
     </body>
     
