@@ -177,6 +177,12 @@
   margin-top: 120px;
   margin-right: 0px;
 }
+@media (max-width: 1000px) {
+  #banner {
+    height: 275px;
+    background-image: url(../resources/fotos/cacuvalen_resized.png);
+  }
+}
 
 .animate__fadeIn {
   animation-delay: 0.5s;
@@ -205,9 +211,11 @@ body footer {
   font-family: "Roboto Mono";
 }
 
-.gallery img:hover {
-  transform: scale(1.4);
-  z-index: 2;
+@media (min-width: 1200px) {
+  .gallery img:hover {
+    transform: scale(1.4);
+    z-index: 2;
+  }
 }
 
 .flex-center {

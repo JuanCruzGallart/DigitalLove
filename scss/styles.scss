@@ -35,10 +35,13 @@ html
 }
 
 .gallery{
-    img:hover{
+    @media (min-width:1200px){
+        img:hover{
             transform: scale(1.4);
             z-index: 2;
+        }
     }
+    
 }
 
 .flex-center{

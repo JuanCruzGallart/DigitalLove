@@ -2,6 +2,15 @@
 
 - Galeria responsive con carousel slider para portfolio.html
 
-- Hacer algo con NFTs.html
 
-- Embellecer prints.html
+- Arreglar fotos portfolio
+	
+	. Cortarlo a lucas en la foto de tarditi
+	. Subir la foto de Jaz	
+	. Que se superpongan bien
+
+
+- Cambiar color cards (gris oscuro?)
+
+- Cambiar la foto de Gabi en About Me
+
