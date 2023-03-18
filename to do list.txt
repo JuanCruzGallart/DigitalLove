@@ -14,3 +14,8 @@
 
 - Cambiar la foto de Gabi en About Me
 
+- Usar mixins y variables sass
+
+- Usar alts, favicons y verificar que la semantica este bien
+
+- Comprimir imagenes (sin perdida)

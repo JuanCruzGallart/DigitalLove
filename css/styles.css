@@ -99,7 +99,7 @@
   }
 }
 #index-banner {
-  background-image: url(../resources/fotos/weirdShit.jpg);
+  background-image: url(../resources/fotos__comprimidas/weirdShit.jpg);
   font-size: 110px;
   padding: 400px 0px 0px 0px;
   height: 600px;
@@ -113,7 +113,7 @@
 }
 
 #portfolio-banner {
-  background-image: url(../resources/fotos/cacu-tigre-byn.jpg);
+  background-image: url(../resources/fotos__comprimidas/cacu-tigre-byn.jpg);
   font-size: 110px;
   padding: 400px 0px 0px 0px;
   height: 600px;
@@ -127,7 +127,7 @@
 }
 
 #nft-banner {
-  background-image: url(../resources/fotos/lucia.jpg);
+  background-image: url(../resources/fotos__comprimidas/lucia.jpg);
   font-size: 110px;
   padding: 400px 0px 0px 0px;
   height: 600px;
@@ -141,7 +141,7 @@
 }
 
 #prints-banner {
-  background-image: url(../resources/fotos/teo-mano.jpg);
+  background-image: url(../resources/fotos__comprimidas/teo-mano.jpg);
   font-size: 110px;
   padding: 400px 0px 0px 0px;
   height: 600px;
@@ -155,7 +155,7 @@
 }
 
 #aboutMe-banner {
-  background-image: url(../resources/fotos/gabi-sabana.jpg);
+  background-image: url(../resources/fotos__comprimidas/jo-cumple-maki.JPG);
   font-size: 110px;
   padding: 400px 0px 0px 0px;
   height: 600px;
@@ -170,7 +170,7 @@
 
 /*Banner Index mitad de pagina*/
 #banner {
-  background-image: url(../resources/fotos/cacuvalen.jpg);
+  background-image: url(../resources/fotos__comprimidas/cacuvalen.jpg);
   height: 550px;
   background-size: cover;
   background-attachment: fixed;
@@ -180,7 +180,7 @@
 @media (max-width: 1000px) {
   #banner {
     height: 275px;
-    background-image: url(../resources/fotos/cacuvalen_resized.png);
+    background-image: url(../resources/fotos__comprimidas/cacuvalen_resized.png);
   }
 }
 
@@ -202,6 +202,10 @@ body {
   max-width: 100%;
   font-family: "Roboto Mono";
   background-image: linear-gradient(to right, #272640, #620404);
+  /*GRID INDEX*/
+}
+body section {
+  margin-top: 100px;
 }
 body img {
   border-radius: 15px;
@@ -210,15 +214,51 @@ body img {
 body footer {
   font-family: "Roboto Mono";
 }
-
+body footer .footer__icon__hover {
+  transition: 0.5s;
+}
+body footer .footer__icon__hover:hover {
+  transform: scale(1.5);
+}
+body .h1 {
+  color: white;
+  font-size: 5rem;
+}
+body .h2 {
+  color: white;
+  font-size: 2.5rem;
+}
+body .h3 {
+  color: white;
+  font-size: 1.6666666667rem;
+}
+body .h4 {
+  color: white;
+  font-size: 1.25rem;
+}
+body .h5 {
+  color: white;
+  font-size: 1rem;
+}
+body .h6 {
+  color: white;
+  font-size: 0.8333333333rem;
+}
+body .img-nfts {
+  max-width: 800px;
+}
+@media (max-width: 1200px) {
+  body .img-nfts {
+    max-width: 400px;
+  }
+}
 @media (min-width: 1200px) {
-  .gallery img:hover {
+  body .gallery img:hover {
     transform: scale(1.4);
     z-index: 2;
   }
 }
-
-.flex-center {
+body .flex-center {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
@@ -226,97 +266,78 @@ body footer {
   align-items: center;
   margin-top: 120px;
 }
-
-.gallery {
+body .gallery {
   padding: 80px;
 }
-
-.gallery-item {
+body .gallery-item {
   max-width: 100%;
 }
-
-#gallery-modal .modal-img {
+body #gallery-modal .modal-img {
   max-width: 100%;
 }
-
-header, h1 {
+body header, body h1 {
   font-size: 7rem;
   margin-right: 30px;
 }
-
 @media only screen and (max-width: 778px) {
-  header h1 {
+  body header h1 {
     font-size: 3rem;
   }
 }
-header a:visited {
+body header a:visited {
   color: white;
   text-decoration: none;
 }
-
-button {
+body button {
   height: 50px;
   font-size: 20px;
   text-align: center;
   margin: 30px;
 }
-
-.flex-container__button {
+body .flex-container__button {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-
-.flex-container-end {
+body .flex-container-end {
   display: flex;
   flex-direction: row;
   justify-content: end;
 }
-
-h1 {
+body h1 {
   padding: 15px;
 }
-
-h2 {
+body h2 {
   font-size: 30px;
   padding: 15px;
 }
-
-ul {
+body ul {
   margin: 20px;
 }
-
-footer {
+body footer {
   text-align: center;
   background-color: black;
   color: white;
   padding: 35px;
   margin-top: 100px;
 }
-
-footer a:visited {
+body footer a:visited {
   color: white;
   text-decoration: none;
 }
-
-/*GRID INDEX*/
-.card-body {
+body .card-body {
   color: black;
 }
-
-.img-fluid rounded-start {
+body .img-fluid rounded-start {
   width: 100%;
 }
-
-a {
+body a {
   margin: 0em 1em;
 }
-
-.gallery {
+body .gallery {
   padding: 80px 0px;
 }
-
-.gallery img {
+body .gallery img {
   max-width: 100%;
 }
 

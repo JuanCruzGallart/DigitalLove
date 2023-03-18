@@ -1,5 +1,5 @@
 #index-banner{
-    background-image:  url(../resources/fotos/weirdShit.jpg) ; 
+    background-image:  url(../resources/fotos__comprimidas/weirdShit.jpg) ; 
     font-size: 110px;
     padding: 400px 0px 0px 0px;
     height: 600px;
@@ -13,7 +13,7 @@
 }
 
 #portfolio-banner{
-    background-image: url(../resources/fotos/cacu-tigre-byn.jpg);
+    background-image: url(../resources/fotos__comprimidas/cacu-tigre-byn.jpg);
     font-size: 110px;
     padding: 400px 0px 0px 0px;
     height: 600px;
@@ -26,7 +26,7 @@
     box-sizing:content-box;
 }
 #nft-banner{
-    background-image: url(../resources/fotos/lucia.jpg);
+    background-image: url(../resources/fotos__comprimidas/lucia.jpg);
     font-size: 110px;
     padding: 400px 0px 0px 0px;
     height: 600px;
@@ -40,7 +40,7 @@
 }
 
 #prints-banner{
-    background-image: url(../resources/fotos/teo-mano.jpg);
+    background-image: url(../resources/fotos__comprimidas/teo-mano.jpg);
     font-size: 110px;
     padding: 400px 0px 0px 0px;
     height: 600px;
@@ -54,7 +54,7 @@
 }
 
 #aboutMe-banner{
-  background-image: url(../resources/fotos/gabi-sabana.jpg);
+  background-image: url(../resources/fotos__comprimidas/jo-cumple-maki.JPG);
   font-size: 110px;
   padding: 400px 0px 0px 0px;
   height: 600px;
@@ -69,7 +69,7 @@
 
 /*Banner Index mitad de pagina*/
 #banner{
-    background-image: url(../resources/fotos/cacuvalen.jpg);
+    background-image: url(../resources/fotos__comprimidas/cacuvalen.jpg);
     height: 550px;
     background-size: cover;
     background-attachment: fixed;
@@ -79,7 +79,7 @@
     &{
         @media (max-width: 1000px) {
             height: 275px;
-            background-image: url(../resources/fotos/cacuvalen_resized.png);
+            background-image: url(../resources/fotos__comprimidas/cacuvalen_resized.png);
           }
     }
 }
