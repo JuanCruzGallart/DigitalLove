@@ -23,6 +23,7 @@ html
         // background-color:  $color-primario;
         background-image: linear-gradient(to right,$color-primario,$color-cuaternario);
         // background-image: radial-gradient(ellipse,$color-cuaternario,$color-primario);
+        overflow-x: hidden;
 
         section{
             margin-top: 100px;
@@ -36,38 +37,76 @@ html
 
     footer{
         font-family: $fuente-secundaria;
+
         .footer__icon__hover{
             transition: 0.5s;
+            display: inline-block;
         }
         .footer__icon__hover:hover{
             transform: scale(1.5);
         }
+
+        img{
+            max-width: 25px;
+            
+        }
 }
 
-@for $i from 1 through 6{
-    .h#{$i}{
-        color: white;
-        font-size: 5rem / $i;
-    }
+.color-card{
+    background-color: $color-secundario;
+}
+
+.text-white{
+    color: white;
+}
+
+.title-nfts{
+    font-size: 3rem;
 }
 
 .img-nfts{
-    max-width: 800px;
+    max-width: 600px;
 
     @media (max-width:1200px) {
+        max-width: 550px;
+    }
+
+    @media (max-width: 990px){
+        max-width: 500px;
+    }
+
+    @media (max-width: 800px){
+        max-width: 450px;
+    }
+
+    @media (max-width:650px){
         max-width: 400px;
+    }
+
+    @media (max-width: 500px){
+        max-width: 350px ;
+    }
+
+    @media (max-width: 450px){
+        max-width: 300px ;
+    }
+
+    @media (max-width: 400px){
+        max-width: 250px ;
     }
 }
 
-.gallery{
-    @media (min-width:1200px){
-        img:hover{
-            transform: scale(1.4);
-            z-index: 2;
-        }
-    }
+
+// HOVER GALERIA PORTFOLIO
+// .gallery{
+//     @media (min-width:1200px){
+//         img:hover{
+//             transform: scale(1.4);
+//             z-index: 2;
+//         }
+//     }
     
-}
+// }
 
 .flex-center{
     display: flex;
@@ -136,7 +175,7 @@ h1{
 }
 
 h2{
-    font-size: 30px;
+    
     padding: 15px;
     
 }

@@ -202,6 +202,7 @@ body {
   max-width: 100%;
   font-family: "Roboto Mono";
   background-image: linear-gradient(to right, #272640, #620404);
+  overflow-x: hidden;
   /*GRID INDEX*/
 }
 body section {
@@ -216,46 +217,59 @@ body footer {
 }
 body footer .footer__icon__hover {
   transition: 0.5s;
+  display: inline-block;
 }
 body footer .footer__icon__hover:hover {
   transform: scale(1.5);
 }
-body .h1 {
-  color: white;
-  font-size: 5rem;
+body footer img {
+  max-width: 25px;
 }
-body .h2 {
-  color: white;
-  font-size: 2.5rem;
+body .color-card {
+  background-color: #3A3B40;
 }
-body .h3 {
+body .text-white {
   color: white;
-  font-size: 1.6666666667rem;
 }
-body .h4 {
-  color: white;
-  font-size: 1.25rem;
-}
-body .h5 {
-  color: white;
-  font-size: 1rem;
-}
-body .h6 {
-  color: white;
-  font-size: 0.8333333333rem;
+body .title-nfts {
+  font-size: 3rem;
 }
 body .img-nfts {
-  max-width: 800px;
+  max-width: 600px;
 }
 @media (max-width: 1200px) {
+  body .img-nfts {
+    max-width: 550px;
+  }
+}
+@media (max-width: 990px) {
+  body .img-nfts {
+    max-width: 500px;
+  }
+}
+@media (max-width: 800px) {
+  body .img-nfts {
+    max-width: 450px;
+  }
+}
+@media (max-width: 650px) {
   body .img-nfts {
     max-width: 400px;
   }
 }
-@media (min-width: 1200px) {
-  body .gallery img:hover {
-    transform: scale(1.4);
-    z-index: 2;
+@media (max-width: 500px) {
+  body .img-nfts {
+    max-width: 350px;
+  }
+}
+@media (max-width: 450px) {
+  body .img-nfts {
+    max-width: 300px;
+  }
+}
+@media (max-width: 400px) {
+  body .img-nfts {
+    max-width: 250px;
   }
 }
 body .flex-center {
@@ -308,7 +322,6 @@ body h1 {
   padding: 15px;
 }
 body h2 {
-  font-size: 30px;
   padding: 15px;
 }
 body ul {
