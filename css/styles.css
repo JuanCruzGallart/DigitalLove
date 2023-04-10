@@ -203,7 +203,6 @@ body {
   font-family: "Roboto Mono";
   background-image: linear-gradient(to right, #272640, #620404);
   overflow-x: hidden;
-  /*GRID INDEX*/
 }
 body section {
   margin-top: 100px;
@@ -225,54 +224,59 @@ body footer .footer__icon__hover:hover {
 body footer img {
   max-width: 25px;
 }
-body .color-card {
+
+.color-card {
   background-color: #3A3B40;
 }
-body .text-white {
+
+.text-white {
   color: white;
 }
-body .title-nfts {
+
+.title-nfts {
   font-size: 3rem;
 }
-body .img-nfts {
+
+.img-nfts {
   max-width: 600px;
 }
 @media (max-width: 1200px) {
-  body .img-nfts {
+  .img-nfts {
     max-width: 550px;
   }
 }
 @media (max-width: 990px) {
-  body .img-nfts {
+  .img-nfts {
     max-width: 500px;
   }
 }
 @media (max-width: 800px) {
-  body .img-nfts {
+  .img-nfts {
     max-width: 450px;
   }
 }
 @media (max-width: 650px) {
-  body .img-nfts {
+  .img-nfts {
     max-width: 400px;
   }
 }
 @media (max-width: 500px) {
-  body .img-nfts {
+  .img-nfts {
     max-width: 350px;
   }
 }
 @media (max-width: 450px) {
-  body .img-nfts {
+  .img-nfts {
     max-width: 300px;
   }
 }
 @media (max-width: 400px) {
-  body .img-nfts {
+  .img-nfts {
     max-width: 250px;
   }
 }
-body .flex-center {
+
+.flex-center {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
@@ -280,77 +284,96 @@ body .flex-center {
   align-items: center;
   margin-top: 120px;
 }
-body .gallery {
+
+.gallery {
   padding: 80px;
 }
-body .gallery-item {
+
+.gallery-item {
   max-width: 100%;
 }
-body #gallery-modal .modal-img {
+
+#gallery-modal .modal-img {
   max-width: 100%;
 }
-body header, body h1 {
+
+header, h1 {
   font-size: 7rem;
   margin-right: 30px;
 }
+
 @media only screen and (max-width: 778px) {
-  body header h1 {
+  header h1 {
     font-size: 3rem;
   }
 }
-body header a:visited {
+header a:visited {
   color: white;
   text-decoration: none;
 }
-body button {
+
+button {
   height: 50px;
   font-size: 20px;
   text-align: center;
   margin: 30px;
 }
-body .flex-container__button {
+
+.flex-container__button {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-body .flex-container-end {
+
+.flex-container-end {
   display: flex;
   flex-direction: row;
   justify-content: end;
 }
-body h1 {
+
+h1 {
   padding: 15px;
 }
-body h2 {
+
+h2 {
   padding: 15px;
 }
-body ul {
+
+ul {
   margin: 20px;
 }
-body footer {
+
+footer {
   text-align: center;
   background-color: black;
   color: white;
   padding: 35px;
   margin-top: 100px;
 }
-body footer a:visited {
+
+footer a:visited {
   color: white;
   text-decoration: none;
 }
-body .card-body {
+
+/*GRID INDEX*/
+.card-body {
   color: black;
 }
-body .img-fluid rounded-start {
+
+.img-fluid rounded-start {
   width: 100%;
 }
-body a {
+
+a {
   margin: 0em 1em;
 }
-body .gallery {
+
+.gallery {
   padding: 80px 0px;
 }
-body .gallery img {
+
+.gallery img {
   max-width: 100%;
 }
 
