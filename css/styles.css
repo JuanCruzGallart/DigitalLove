@@ -60,6 +60,12 @@
   opacity: 0;
 }
 
+#selector-idioma {
+  display: flex;
+  justify-content: end;
+  margin: 0px 0px 0px 120px;
+}
+
 /*BOTONES PERSONALIZADOS*/
 .shadow__btn {
   padding: 10px 20px;
