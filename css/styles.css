@@ -1,5 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Sono:wght@300&family=Source+Code+Pro&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Sono&family=Source+Code+Pro&display=swap");
+.nav_portfolio {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+@media only screen and (min-width: 991px) {
+  .nav_portfolio {
+    height: 50px;
+  }
+}
 .navegacion {
   position: sticky;
   top: 0;
@@ -17,47 +28,6 @@
 
 .navbar {
   --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-
-/*Botones NAV*/
-.btn:link,
-.btn:visited {
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-  padding: 5px 30px;
-  border: 1px solid;
-  border-radius: 1000px;
-  display: inline-block;
-  transition: all 0.2s;
-  position: relative;
-}
-
-.btn:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 20px rgba(27, 27, 27, 0.5);
-}
-
-.btn:active {
-  transform: translateY(-3px);
-}
-
-.btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 100px;
-  top: 0;
-  left: 0;
-  position: absolute;
-  z-index: -1;
-  transition: all 0.3s;
-}
-
-.btn:hover::after {
-  background-color: rgb(0, 238, 255);
-  transform: scaleX(1.4) scaleY(1.5);
-  opacity: 0;
 }
 
 #selector-idioma {
@@ -89,21 +59,51 @@
   box-shadow: 0 0 5px rgb(0, 140, 255), 0 0 25px rgb(0, 140, 255), 0 0 50px rgb(0, 140, 255), 0 0 100px rgb(0, 140, 255);
 }
 
-@media only screen and (max-width: 992px) {
-  .btn {
-    margin: 8px;
-  }
+/*Botones NAV*/
+.butn {
+  margin: 5px;
 }
-@media only screen and (max-width: 992px) {
-  .btn {
-    margin: 8px;
-  }
+
+.butn:link,
+.butn:visited {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  padding: 5px 30px;
+  border: 1px solid;
+  border-radius: 1000px;
+  display: inline-block;
+  transition: all 0.2s;
+  position: relative;
 }
-@media only screen and (max-width: 992px) {
-  .btn {
-    margin: 8px;
-  }
+
+.butn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(27, 27, 27, 0.5);
 }
+
+.butn:active {
+  transform: translateY(-3px);
+}
+
+.butn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s;
+}
+
+.butn:hover::after {
+  background-color: rgb(0, 238, 255);
+  transform: scaleX(1.4) scaleY(1.5);
+  opacity: 0;
+}
+
 #index-banner {
   background-image: url(../resources/fotos__comprimidas/weirdShit.jpg);
   font-size: 110px;
@@ -291,10 +291,6 @@ body footer img {
   margin-top: 120px;
 }
 
-.gallery {
-  padding: 80px;
-}
-
 .gallery-item {
   max-width: 100%;
 }
@@ -375,12 +371,62 @@ a {
   margin: 0em 1em;
 }
 
-.gallery {
-  padding: 80px 0px;
-}
-
 .gallery img {
   max-width: 100%;
+  object-fit: contain;
+}
+
+aside {
+  position: sticky;
+  top: 135px; /* Height of the navbar */
+  margin-left: 80px;
+  margin-right: 100px;
+  margin-top: 25vh;
+  border-color: #620404;
+  border-width: 5px;
+  border-radius: 5%;
+  float: left;
+  color: white;
+  text-align: left;
+  background-image: radial-gradient(#620404, #51473D);
+}
+aside button {
+  margin: 8.5px;
+}
+aside .dropdown-item {
+  width: auto;
+}
+aside .dropdown_li {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+aside .fila-margen {
+  padding: 2px;
+  border-width: 4px;
+  border-color: brown;
+}
+
+@media only screen and (max-width: 991px) {
+  aside {
+    display: none;
+  }
+  .gallery {
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+}
+@media only screen and (min-width: 991px) {
+  #aside_button {
+    display: none;
+  }
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(0, 0, 0);
 }
 
 /*# sourceMappingURL=styles.css.map */

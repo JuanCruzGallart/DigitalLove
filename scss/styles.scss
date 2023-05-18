@@ -118,10 +118,6 @@ html
     margin-top: 120px;
 }
 
-.gallery{
-    padding: 80px;
-}
-
 .gallery-item{
     max-width: 100%;
 }
@@ -213,9 +209,72 @@ a{
 }
 
 .gallery{
-  padding: 80px 0px
+
 }
 
 .gallery img{
-  max-width: 100%
+  max-width: 100%;
+  object-fit: contain;
 }
+
+aside{
+    position: sticky;
+    top: 135px; /* Height of the navbar */
+    margin-left:80px;
+    margin-right: 100px;
+    margin-top: 25vh;
+    // border-style: solid;
+    border-color: $color-cuaternario;
+    border-width: 5px;
+    border-radius: 5%;
+    float: left;
+    color:white;
+    text-align: left;
+    background-image: radial-gradient($color-cuaternario, $color-terciario);
+
+    button{
+        margin: 8.5px;
+    }
+
+    .dropdown-item{
+        width: auto;
+    }
+
+    .dropdown_li{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .fila-margen{
+        padding: 2px;
+        // border-top: solid;
+        border-width: 4px;
+        border-color: brown;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    aside{
+        display: none;
+    }
+
+    .gallery{
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+  }
+
+  @media only screen and (min-width: 991px) {
+    #aside_button{
+        display: none;
+    }
+  }
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0)
+  }
