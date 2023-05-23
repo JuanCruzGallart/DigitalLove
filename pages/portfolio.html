@@ -9,12 +9,15 @@
       <meta name="keywords" content="DIGITAL, LOVE, DIGITAL LOVE, DIGITALLOVE, PHOTOGRAPHY, PORTFOLIO, PHOTOGRAPH, NFT PHOTOGRAPHY, NFT, PHOTOGRAPHY GALLERY, PHOTOGRAPHY LIFE, ARTIST PORTFOLIO,">
       <!--FAVICON-->
       <link rel="shortcut icon" href="../resources/casca.jpg">     
-      <!--CSS-->
+      <!--BOOTSTRAP-->
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
       <!--ANIMACIONES-->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
       <!--Animaciones 2-->
       <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+      <!--FONT AWESOME-->
+      <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+      <!--CSS-->
       <link rel="stylesheet" href="../css/styles.css">
       <title>DigitalLove's Photography Portfolio</title>
     </head>
@@ -30,203 +33,137 @@
           
 
 
-<!--NAV-->        
-<nav class="navbar navbar-expand-lg bg-body-tertiary navbar bg-dark navegacion nav_portfolio" data-bs-theme="dark">
-  <div class="container-fluid">
-    
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="butn" class="nav-link active" aria-current="page" href="../index.html" >Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="butn" class="nav-link" href="#">Portfolio</a>
-        </li>
-        <li class="nav-item">
-          <a class="butn" class="nav-link" href="./prints.html">Prints</a>
-        </li>
-        <li class="nav-item">
-          <a class="butn" class="nav-link" href="./NFTs.html">NFTs</a>
-        </li>
-        <li class="nav-item">
-          <a class="butn" class="nav-link " href="./aboutMe.html">About Me</a>
-        </li>
-      </ul>
+
+  <!--NAV-->   
+  
+  <div id="cortina-nav" class="z-1">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary navbar bg-dark navegacion nav_portfolio" data-bs-theme="dark">
+      <div class="container-fluid">
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="butn" class="nav-link active" aria-current="page" href="../index.html" >Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="butn" class="nav-link" href="#">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="butn" class="nav-link" href="./prints.html">Prints</a>
+            </li>
+            <li class="nav-item">
+              <a class="butn" class="nav-link" href="./NFTs.html">NFTs</a>
+            </li>
+            <li class="nav-item">
+              <a class="butn" class="nav-link " href="./aboutMe.html">About Me</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  
+
+        <aside class="z-1" data-bs-theme="dark">
+          <div class="container text-start">
+            
+            <div class="row">
+              <div class="col">
+                <button type="button" class="btn btn-secondary btn-lg" id="button_favourites">Favourites</button>
+
+                
+              </div>
+            </div>
+            
+            <div class="row fila-margen">
+              <div class="col">
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    2023
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item " href="#">Action</a></li>
+                    <li><a class="dropdown-item " href="#">Another action</a></li>
+                    <li><a class="dropdown-item " href="#">Something else here</a></li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="row fila-margen">
+              <div class="col">
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    2022
+                  </button>
+                  <ul class="dropdown-menu text-center">
+                    <li><a class="dropdown-item " href="#" id="^_^">^_^</a></li>
+                    <li><a class="dropdown-item " href="#" id="tigre">from that time we took the train</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row fila-margen">
+              <div class="col">
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    2021
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item " href="#" id="2021_x_btn">X</a></li>
+                    <li><a class="dropdown-item " href="#" id="2021_fromthatnight_btn">fromthatnightweslept <br> togetherforthefirsttime</a></li>
+                    <li><a class="dropdown-item " href="#" id="2021_firstoftheyear_btn">first of the year</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row fila-margen">
+              <div class="col">
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    2020
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item " href="#" id="show_button2020">≧◡≦ / duvet</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </aside>
+
+        <main>
+
+          <section class="gallery z-0">
+            <div class="container-lg">
+              <div class="row gy-4 row-cols-1 row-cols-sm-2 row-cols-md-3" id="galeria">
+
+              </div>
+            </div>
+          </section>
+
+<div id="cortina">   
+  <div class="preview-box z-3">
+    <div class="img-box">
+      <div class="slide prev z-4">
+        <i class="fas fa-anlge-left"></i>
+      </div>
+      <div class="slide next z-4">
+        <i class="fas fa-anlge-right"></i>
+      </div>
+      <img src="" alt="">
     </div>
   </div>
-</nav>
+</div>
 
-
-
-      <aside class="z-3" data-bs-theme="dark">
-        <div class="container text-start">
-          
-          <div class="row">
-            <div class="col">
-              <button type="button" class="btn btn-secondary btn-lg" id="button_favourites">Favourites</button>
-
-              
-            </div>
-          </div>
-          
-          <div class="row fila-margen">
-            <div class="col">
-              <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  2023
-                </button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item " href="#">Action</a></li>
-                  <li><a class="dropdown-item " href="#">Another action</a></li>
-                  <li><a class="dropdown-item " href="#">Something else here</a></li>
-                </ul>
-              </div>
-
-            </div>
-          </div>
-
-          <div class="row fila-margen">
-            <div class="col">
-              <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  2022
-                </button>
-                <ul class="dropdown-menu text-center">
-                  <li><a class="dropdown-item " href="#" id="^_^">^_^</a></li>
-                  <li><a class="dropdown-item " href="#" id="tigre">from that time we took the train</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="row fila-margen">
-            <div class="col">
-              <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  2021
-                </button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item " href="#" id="2021_x_btn">X</a></li>
-                  <li><a class="dropdown-item " href="#" id="2021_fromthatnight_btn">fromthatnightweslept <br> togetherforthefirsttime</a></li>
-                  <li><a class="dropdown-item " href="#" id="2021_firstoftheyear_btn">first of the year</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="row fila-margen">
-            <div class="col">
-              <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  2020
-                </button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item " href="#" id="show_button2020">≧◡≦ / duvet</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </aside>
-
-      <main>
-
-        <section class="gallery z-1">
-          <div class="container-lg">
-            <div class="row gy-4 row-cols-1 row-cols-sm-2 row-cols-md-3" id="galeria">
-              
-              <div class="col" data-aos="fade-down">
-                <img src="../resources/portfolio-fotos_/chiquis-sillon.jpg" alt="">
-              </div>
-            
-              <div class="col" data-aos="fade-down">
-                <img src="../resources/portfolio-fotos_/combo-pulga.jpg" alt="">
-              </div>
-
-
-              <div class="col" data-aos="fade-down">
-                <img src="../resources/portfolio-fotos_/jo-cumple-maki.JPG" alt="">
-              </div>
-
-              <div class="col" data-aos="fade-down">
-                <img src="../resources/portfolio-fotos_/jo-eche.jpg" alt="">
-              </div>
-
-              <div class="col" data-aos="fade-down">
-                <img src="../resources/portfolio-fotos_/lucia-facultadderecho.jpg" alt="">
-              </div>
-
-              <div class="col" data-aos="fade-down">
-                <img src="../resources/portfolio-fotos_/maki-joaco-terraza.jpg" alt="">
-              </div>
-
-              <div class="col" data-aos="fade-down">
-                <img src="../resources/portfolio-fotos_/valentin-facultadderecho.jpg" alt="">
-              </div>
-
-              <div class="col" data-aos="fade-down">
-                <img src="../resources/portfolio-fotos_/valentin-teo.jpg" alt="">
-              </div>
-
-              <div class="col" data-aos="fade-down">
-                <img src="../resources/portfolio-fotos_/ventana.jpg" alt="">
-              </div>
-
-              <div class="col" data-aos="fade-down">
-                <img src="../resources/fotos/jaz-mercedes.JPG" alt="">
-              </div>
-
-              <div class="col" data-aos="fade-down">
-                <img src="../resources/fotos/joaco-medialuna-lsd.JPG" alt="">
-              </div>
-
-              <div class="col" data-aos="fade-down">
-                <img src="../resources/fotos/valen-colectivo.jpg" alt="">
-              </div>
-
-              <div class="col" data-aos="fade-down">
-                <img src="../resources/fotos/cacu-tigre-byn.jpg" alt="">
-              </div>
-
-              <div class="col" data-aos="fade-down">
-                <img src="../resources/fotos/AA008.jpg" alt="">
-              </div>
-
-              <div class="col" data-aos="fade-down">
-                <img src="../resources/fotos/AA012.jpg" alt="">
-              </div>
-
-              <div class="col" data-aos="fade-down">
-                <img src="../resources/fotos/AA010.jpg" alt="">
-              </div>
-
-              <div class="col" data-aos="fade-down">
-                <img src="../resources/fotos/AA019.jpg" alt="">
-              </div>
-
-              <div class="col" data-aos="fade-down">
-                <img src="../resources/fotos/AA031.jpg" alt="">
-              </div>
-
-              <div class="col" data-aos="fade-down">
-                <img src="../resources/fotos/AA024.jpg" alt="">
-              </div>
-
-              <div class="col" data-aos="fade-down">
-                <img src="../resources/fotos/AA025.jpg" alt="">
-              </div>
-
-            </div>
-          </div>
-        </section>
-
-
-
-      </main>
+</main>
 
           <!--JAVASCRIPT-->
           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>

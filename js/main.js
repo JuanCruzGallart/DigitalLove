@@ -2,6 +2,11 @@
 let asideContenedor = document.getElementsByTagName("aside");
 let containerGaleria = document.querySelector("#galeria");
 let showFavouritesBtn = document.getElementById("button_favourites");
+const previewBox = document.querySelector(".preview-box");
+const previewImg = previewBox.querySelector(".imageClass");
+
+
+//Botones Aside
 let show2020Btn = document.getElementById("show_button2020")
 let show2021fromThatNightBtn = document.getElementById("2021_fromthatnight_btn");
 let show2021firstOfTheYearBtn = document.getElementById("2021_firstoftheyear_btn");
@@ -24,12 +29,11 @@ function loadImages(carpeta, array, cantidad){
         img.onload = function() {
             array.push(img);
         };
-        img.onerror = function() {
-            console.log(`Image ../resources/fotos__comprimidas/${carpeta}/${i}.jpg not found`);
-        };
-      }
+        // img.onerror = function() {
+        //     console.log(`Image ../resources/fotos__comprimidas/${carpeta}/${i}.jpg not found`);
+        // };
+    }
 };
-
 
 //Funcion SELECCIONADORA de ARRAYS y BOTONES
 function createImageElements(imageSources, button) {
@@ -40,17 +44,66 @@ function createImageElements(imageSources, button) {
             containerGaleria.innerHTML = "";
         
             for (let i = 0; i < imageSources.length; i++) {
+                let span = document.createElement("span")
                 let img = document.createElement("img");
                 img.src = imageSources[i].src;
                 img.classList.add( "imageClass");
-                img.addEventListener("click", function(){
-                    openModal(i, imageSources);
-                })
-                containerGaleria.appendChild(img);
+                containerGaleria.appendChild(span);
+                span.appendChild(img);
             }
         })
     });
 };
+
+window.onload = () => {
+    const containerGaleria = document.querySelector("#galeria");
+    const previewBox = document.querySelector(".preview-box");
+    const previewImg = previewBox.querySelector("img");
+  
+    containerGaleria.addEventListener("click", (event) => {
+      const target = event.target;
+      const imageElements = containerGaleria.querySelectorAll(".imageClass");
+  
+      for (let i = 0; i < imageElements.length; i++) {
+        if (target === imageElements[i]) {
+          console.log(i);
+          // function preview(){
+          //   let selectedImgUrl = [i].querySelector("img").src;
+          //   previewImg.src = selectedImgUrl;
+          // }
+          // preview();
+          previewBox.setAttribute("id", "show-box");
+          addCurtain();
+          break;
+        }
+      }
+    });
+  
+    document.addEventListener("click", (event) => {
+      const target = event.target;
+      if (target.classList.contains("curtain")) {
+        removeCurtain();
+      }
+    });
+  };
+  
+  function addCurtain() {
+    let curtain = document.createElement("div");
+    let navbar = document.getElementById("cortina-nav");
+    curtain.classList.add("curtain", "z-2");
+    document.getElementById("cortina").appendChild(curtain);
+    navbar.classList.add("hide");
+  }
+  
+  function removeCurtain() {
+    let curtain = document.querySelector(".curtain");
+    if (curtain) {
+      curtain.parentNode.removeChild(curtain);
+      previewBox.removeAttribute("id");
+    }
+    let navbar = document.getElementById("cortina-nav");
+    navbar.classList.remove("hide");
+  }
 
 
 //Array Favourites
@@ -82,58 +135,3 @@ const imageArrayTigre = [];
 
 loadImages(`2022/tigre`, imageArrayTigre, 42);
 createImageElements(imageArrayTigre, showTigreBtn);
-
-
-
-
-//Funcion que CREA un MODAL en el DOM cuando una imagen es clickeada
-// function openModal(index, images){
-//     let modal = document.createElement("div");
-//     modal.classList.add("modal");
-
-//     let modalContent = document.createElement("div");
-//     modalContent.classList.add("modal-content");
-//     modal.appendChild(modalContent);
-
-//     let modalImage = document.createElement("img");
-//     modalImage.src = images.src;
-//     modalImage.classList.add("modal-image");
-//     modalContent.appendChild(modalImage);
-
-//     //Navigation buttons
-// let prevButton = document.createElement("button");
-// prevButton.classList.add("modal-nav");
-// prevButton.classList.add("modal-nav-prev");
-// prevButton.innerText = "<";
-// prevButton.addEventListener("click" , function(){
-//     index = (index - 1 + images.length) % images.length;
-//     modalImage.src = images.src
-// });
-// modalContent.appendChild(prevButton);
-
-// let nextButton = document.createElement("button");
-// nextButton.classList.add("modal-nav");
-// nextButton.classList.add("modal-nav-next");
-// nextButton.innerText = ">";
-// nextButton.addEventListener("click", function() {
-//     index = (index + 1) % images.length;
-//     modalImage.src = images[index].src;
-// });
-// modalContent.appendChild(nextButton);
-
-// // Add close button
-// let closeButton = document.createElement("button");
-// closeButton.classList.add("modal-close");
-// closeButton.innerText = "X";
-// closeButton.addEventListener("click", function() {
-//     closeModal(modal);
-// });
-// modalContent.appendChild(closeButton);
-
-// // Add modal to the DOM
-// document.body.appendChild(modal);
-// }
-
-// function closeModal(modal) {
-//     modal.remove();
-// }
