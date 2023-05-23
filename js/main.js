@@ -37,56 +37,53 @@ function loadImages(carpeta, array, cantidad){
 
 //Funcion SELECCIONADORA de ARRAYS y BOTONES
 function createImageElements(imageSources, button) {
-    
     document.addEventListener("DOMContentLoaded", function(){
+
+
         button.addEventListener("click", function(){
-            
             containerGaleria.innerHTML = "";
         
             for (let i = 0; i < imageSources.length; i++) {
+
                 let span = document.createElement("span")
                 let img = document.createElement("img");
+
                 img.src = imageSources[i].src;
                 img.classList.add( "imageClass");
+                img.addEventListener("click", lightbox); 
+
                 containerGaleria.appendChild(span);
                 span.appendChild(img);
-            }
-        })
-    });
-};
 
-window.onload = () => {
-    const containerGaleria = document.querySelector("#galeria");
-    const previewBox = document.querySelector(".preview-box");
-    const previewImg = previewBox.querySelector("img");
-  
-    containerGaleria.addEventListener("click", (event) => {
-      const target = event.target;
-      const imageElements = containerGaleria.querySelectorAll(".imageClass");
-  
-      for (let i = 0; i < imageElements.length; i++) {
-        if (target === imageElements[i]) {
-          console.log(i);
-          // function preview(){
-          //   let selectedImgUrl = [i].querySelector("img").src;
-          //   previewImg.src = selectedImgUrl;
-          // }
-          // preview();
-          previewBox.setAttribute("id", "show-box");
-          addCurtain();
-          break;
-        }
-      }
-    });
-  
-    document.addEventListener("click", (event) => {
-      const target = event.target;
-      if (target.classList.contains("curtain")) {
-        removeCurtain();
-      }
-    });
-  };
-  
+                //Funcion lightbox
+                function lightbox(){
+                  const previewImg = previewBox.querySelector("img");
+                  console.log(i);
+                  function preview(){
+                    let selectedImgUrl = imageSources[i].src;
+                    previewImg.src = selectedImgUrl;
+                  }
+                  preview();
+                  previewBox.setAttribute("id", "show-box");
+                  addCurtain();
+                  document.addEventListener("click", (event) => {
+                    const target = event.target;
+                    if (target.classList.contains("curtain")) {
+                      removeCurtain();
+                    }
+                  });
+                };
+
+                  
+              };
+            }
+        )
+        })
+    };
+
+
+
+//Funciones cortina
   function addCurtain() {
     let curtain = document.createElement("div");
     let navbar = document.getElementById("cortina-nav");
