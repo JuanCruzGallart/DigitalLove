@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Sono:wght@300&family=Source+Code+Pro&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Sono&family=Source+Code+Pro&display=swap");
-.nav_portfolio {
-  position: fixed;
+#cortina-nav {
+  position: sticky;
   top: 0;
-  width: 100%;
+  z-index: 99;
 }
 
 @media only screen and (min-width: 991px) {
@@ -452,15 +452,33 @@ aside .fila-margen {
   transition: all 0.3s ease;
 }
 #cortina .preview-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   max-width: 1200px;
-  width: 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0.9);
   border-radius: 2%;
   opacity: 0;
   pointer-events: none;
+}
+#cortina .preview-box .slide {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 80px;
+  cursor: pointer;
+  line-height: 50px;
+  text-align: center;
+  color: white;
+}
+#cortina .preview-box .slide.prev {
+  left: -250px;
+}
+#cortina .preview-box .slide.next {
+  right: -250px;
 }
 #cortina .preview-box .details {
   display: flex;
@@ -486,28 +504,12 @@ aside .fila-margen {
 }
 #cortina .preview-box .img-box {
   display: flex;
-  width: 100%;
-}
-#cortina .preview-box .img-box .slide {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 30px;
-  cursor: pointer;
-  width: 60px;
-  height: 60px;
-  line-height: 50px;
-  text-align: center;
-  color: white;
-}
-#cortina .preview-box .img-box .slide .prev {
-  left: 0;
-}
-#cortina .preview-box .img-box .slide .next {
-  right: 0;
+  width: fit-content;
 }
 #cortina .preview-box .img-box img {
-  width: 100%;
+  max-height: 90vh;
+  max-width: 80vw;
+  object-fit: contain;
   border-radius: 0;
 }
 

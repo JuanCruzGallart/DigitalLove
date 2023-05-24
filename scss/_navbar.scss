@@ -1,7 +1,13 @@
-.nav_portfolio{
-    position: fixed;
-  top: 0;
-  width: 100%;
+// .nav_portfolio{
+//     position: fixed;
+//     top: 0;
+//     width: 100%;
+// }
+
+#cortina-nav{
+    position: sticky;
+    top: 0;
+    z-index: 99;
 }
 
 @media only screen and (min-width: 991px) {
