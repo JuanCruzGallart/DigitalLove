@@ -46,9 +46,15 @@ html
             transform: scale(1.5);
         }
 
-        img{
+        #opensea_logo_footer{
             max-width: 25px;
-            
+        }
+        #cafecito_boton{
+            margin: 20px 0 0 0 ;
+            transition: 0.5s;
+        }
+        #cafecito_boton:hover{
+            transform: scale(1.05);
         }
     }
 }
@@ -292,7 +298,7 @@ aside{
         height: 100%;
         background-color: black;
         opacity: 0.85;
-       // z-index: 9999; /* Adjust the z-index value as needed */
+        // z-index: 9980; /* Adjust the z-index value as needed */
         cursor: pointer;
       
 }
@@ -302,6 +308,18 @@ aside{
     pointer-events: auto;
     transform: translate(-50%, -50%) scale(1);
     transition: all 0.3s ease;
+}
+
+.preview_shoppingcrt{
+    position: fixed;
+    right: 50px;
+    top: 30px;
+    transition: all 0.3s ease;
+}
+
+.preview_shoppingcrt:hover{
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
 .preview-box{
@@ -375,3 +393,13 @@ aside{
         }
     }
 }}
+
+.heading-galeria{
+    color: white;
+    margin: 50px 0px 50px 0px;
+    text-align: center;
+}
+
+.gallery{
+    margin-top: 20px;
+}
