@@ -403,3 +403,20 @@ aside{
 .gallery{
     margin-top: 20px;
 }
+
+#section_cart{
+    
+    .container{
+        border: solid white;
+        // border-radius: 10%;
+    }
+
+    .row{
+        border: solid white ;
+    }
+
+    .col{
+        color: black;
+        background-color: grey;
+    }
+}

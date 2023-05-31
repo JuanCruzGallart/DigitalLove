@@ -50,4 +50,9 @@
     justify-self: end;
     margin: 0px 70px;
     cursor: pointer;
+    transition: 0.5s;
+}
+
+.nav_cart:hover{
+    transform: scale(1.12);
 }

@@ -241,6 +241,21 @@ function lightbox(index, images) {
       }
     });
   
+    
+//Add to cart button
+    let btnAddToCart = document.querySelector(".preview_shoppingcrt");
+
+    btnAddToCart.addEventListener("click", function addToCart() {
+      let selectedImgUrl = images[index].src;
+      let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+      
+      if (!cartItems.includes(selectedImgUrl)) {
+        let newItemKey = "item_" + Date.now();
+        localStorage.setItem(newItemKey, selectedImgUrl);
+        cartItems.push(newItemKey);
+        localStorage.setItem("cartItems", JSON.stringify(cartItems));  
+      }
+})
 }
 
 // Functions for curtain
@@ -275,11 +290,21 @@ function removeCurtain() {
   cortina.removeChild(shpCrt);
 }
 
-let btnAddToCart = document.querySelector(".preview_shoppingcrt");
-btnAddToCart.addEventListener("click", function addToCart(imagen) {
-  
-})
-
+//Shopping Cart function
+window.onload = () => {
+  let cartImages = document.querySelectorAll(".prints_cart_img")
+  for (let i = 0; i < localStorage.length; i++) {
+    let clave = localStorage.key(i);
+    let prodImg = JSON.parse(localStorage.getItem(clave));
+    let img = document.createElement("img");
+    img.className = "prints_cart_img";
+    img.setAttribute("src", prodImg);
+    let sectionCart = document.querySelector("#section_cart");
+    let col = sectionCart.querySelectorAll(".col");
+    col.appendChild(img);
+   
+  }
+}
 
 // document.addEventListener("DOMContentLoaded", function(){
 //   Swal.fire({

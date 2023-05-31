@@ -45,6 +45,11 @@
   justify-self: end;
   margin: 0px 70px;
   cursor: pointer;
+  transition: 0.5s;
+}
+
+.nav_cart:hover {
+  transform: scale(1.12);
 }
 
 /*BOTONES PERSONALIZADOS*/
@@ -545,6 +550,17 @@ aside .fila-margen {
 
 .gallery {
   margin-top: 20px;
+}
+
+#section_cart .container {
+  border: solid white;
+}
+#section_cart .row {
+  border: solid white;
+}
+#section_cart .col {
+  color: black;
+  background-color: grey;
 }
 
 /*# sourceMappingURL=styles.css.map */
