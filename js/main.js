@@ -292,15 +292,20 @@ function removeCurtain() {
 
 //Shopping Cart function
 window.onload = () => {
-  let cartImages = document.querySelectorAll(".prints_cart_img")
+  
   for (let i = 0; i < localStorage.length; i++) {
     let clave = localStorage.key(i);
     let prodImg = JSON.parse(localStorage.getItem(clave));
+    let row = document.createElement("div");
+    row.classList.add("row");
+    let sectionCart = document.querySelector("#section_cart");
+    sectionCart.appendChild(row);
+    let col = document.createElement("div");
+    col.classList.add("col");
+    row.appendChild(col);
     let img = document.createElement("img");
     img.className = "prints_cart_img";
     img.setAttribute("src", prodImg);
-    let sectionCart = document.querySelector("#section_cart");
-    let col = sectionCart.querySelectorAll(".col");
     col.appendChild(img);
    
   }

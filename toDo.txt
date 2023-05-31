@@ -1,0 +1,79 @@
+!Arreglar createFavImages() =>> ascyn
+!Arreglar toggleBtn flechas Animaciones
+!Carrito de compras 
+!MultiLanguage
+!Completar Arrays con fotos 
+
+
+!Añadir funcionalidad touch slide en galeria {
+    // Get the element you want to add the sliding event to
+const element = document.getElementById("your-element-id");
+
+// Variables to track touch positions
+let startX = 0;
+let startY = 0;
+let distX = 0;
+let distY = 0;
+
+// Add event listeners for touch events
+element.addEventListener("touchstart", handleTouchStart, false);
+element.addEventListener("touchmove", handleTouchMove, false);
+element.addEventListener("touchend", handleTouchEnd, false);
+
+// Touch start event handler
+function handleTouchStart(event) {
+  const touch = event.touches[0];
+  startX = touch.clientX;
+  startY = touch.clientY;
+}
+
+// Touch move event handler
+function handleTouchMove(event) {
+  if (!startX || !startY) {
+    return;
+  }
+
+  const touch = event.touches[0];
+  distX = touch.clientX - startX;
+  distY = touch.clientY - startY;
+}
+
+// Touch end event handler
+function handleTouchEnd() {
+  // Check the sliding direction based on the distance traveled
+  if (Math.abs(distX) > Math.abs(distY)) {
+    if (distX > 0) {
+      // Sliding right
+      console.log("Sliding right");
+    } else {
+      // Sliding left
+      console.log("Sliding left");
+    }
+  } else {
+    if (distY > 0) {
+      // Sliding down
+      console.log("Sliding down");
+    } else {
+      // Sliding up
+      console.log("Sliding up");
+    }
+  }
+
+  // Reset the variables
+  startX = 0;
+  startY = 0;
+  distX = 0;
+  distY = 0;
+}
+
+}
+
+In this code, you first get the element you want to attach the sliding event listener to, by selecting it with getElementById() or any other suitable method. Then, you add event listeners for touchstart, touchmove, and touchend events to that element.
+
+The handleTouchStart() function stores the initial touch position, and the handleTouchMove() function calculates the distance traveled during the touch movement. Finally, the handleTouchEnd() function determines the sliding direction based on the distance traveled and performs the desired actions. In this example, it logs the sliding direction to the console.
+
+You can modify the code inside the sliding direction checks to perform any specific actions or behavior you want when sliding in different directions.
+
+Remember to replace "your-element-id" with the actual ID of the element you want to attach the sliding event listener to.
+
+Please note that this example uses vanilla JavaScript touch events. If you are using a framework or library, such as React or jQuery, there might be specific touch event handling mechanisms available within those frameworks that you can leverage.

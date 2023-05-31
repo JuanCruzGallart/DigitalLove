@@ -420,3 +420,54 @@ aside{
         background-color: grey;
     }
 }
+
+.cartBox{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,.8);
+    // background-color: black;
+    // opacity: 0.85;
+    z-index: 99999;
+    transition: 0.3s linear;
+    transform: scale(0);
+
+    .active{
+        transform: scale(1);
+    }
+
+    .cart{
+        position: relative;
+        height: 50%;
+        width: 80%;
+        background: white;
+        color: black;
+        border-radius: 1.5%;
+        display: flex;
+        align-items: center;
+    }
+
+    svg{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        // background: red;
+        // padding: 15px 15px;
+        cursor: pointer;
+        transition: 0.35s;
+    }
+    svg:hover{
+        background-color: red;
+    }
+
+    h2{
+      position: relative;
+      margin-top: 2%;
+      
+    }
+}
