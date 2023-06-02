@@ -572,6 +572,10 @@ aside .fila-margen {
   background-color: grey;
 }
 
+#active {
+  transform: scale(1);
+}
+
 .cartBox {
   position: fixed;
   top: 0;
@@ -581,13 +585,9 @@ aside .fila-margen {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.8);
   z-index: 99999;
-  transition: 0.3s linear;
+  transition: 0.3s;
   transform: scale(0);
-}
-.cartBox .active {
-  transform: scale(1);
 }
 .cartBox .cart {
   position: relative;
@@ -597,19 +597,20 @@ aside .fila-margen {
   color: black;
   border-radius: 1.5%;
   display: flex;
-  align-items: center;
+  align-items: top;
+  justify-content: center;
 }
-.cartBox svg {
+.cartBox .cart svg {
   position: absolute;
   right: 10px;
   top: 10px;
   cursor: pointer;
   transition: 0.35s;
 }
-.cartBox svg:hover {
+.cartBox .cart svg:hover {
   background-color: red;
 }
-.cartBox h2 {
+.cartBox .cart h2 {
   position: relative;
   margin-top: 2%;
 }

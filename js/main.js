@@ -1,59 +1,33 @@
-// DOM variables
-let asideContenedor = document.getElementsByTagName("aside");
-let containerGaleria = document.querySelector("#galeria");
-let sectionGaleria = document.querySelector("#titulo-container");
-let showFavouritesBtn = document.getElementById("button_favourites");
-const previewBox = document.querySelector(".preview-box");
-const previewImg = previewBox.querySelector(".imageClass");
-let prevBtn = document.querySelector(".prev");
-let nextBtn = document.querySelector(".next");
-let cartNavBtn = document.querySelector(".nav_cart");
-let contenedorPortfolio = document.querySelector("#contenedor_portfolio");
-// let pageLoadShowFavs = document.addEventListener("DOMContentLoaded", )
+// Functions for curtain
+function addCurtain() {
+  let curtain = document.createElement("div");
+  let navbar = document.getElementById("cortina-nav");
+  curtain.classList.add("curtain", "z-1");
+  let cortina = document.getElementById("cortina")
+  cortina.appendChild(curtain);
+  navbar.classList.add("hide");
+  document.addEventListener("click", function (event) {
+    const target = event.target;
+    if (target.classList.contains("curtain")) {
+      removeCurtain();
+    }
+  });
+}
 
-// Botones Aside
-let show2020Btn = document.getElementById("show_button2020");
-let show2021fromThatNightBtn = document.getElementById("2021_fromthatnight_btn");
-let show2021firstOfTheYearBtn = document.getElementById("2021_firstoftheyear_btn");
-let showDiciembreBtn = document.getElementById("^_^");
-let showTigreBtn = document.getElementById("tigre");
-
-// Array Favourites
-const imageArrayFavourites = [];
-
-// ^_^ imgs
-loadFavImgs(`2022/^_^`, 1); loadFavImgs(`2022/^_^`,3 );loadFavImgs(`2022/^_^`, 2);loadFavImgs(`2022/^_^`, 4);loadFavImgs(`2022/^_^`, 5);loadFavImgs(`2022/^_^`, 8);loadFavImgs(`2022/^_^`, 11);loadFavImgs(`2022/^_^`, 13);loadFavImgs(`2022/^_^`, 41);loadFavImgs(`2022/^_^`, 26);loadFavImgs(`2022/^_^`, 31);loadFavImgs(`2022/^_^`, 40);
-
-//Tigre imgs
-loadFavImgs(`2022/tigre`,);
-
-createFavImages(imageArrayFavourites);
-createImageElements(imageArrayFavourites, showFavouritesBtn);
-
-// Array 2020
-const imageArray2020 = [];
-loadImages(`2020`, imageArray2020, 37);
-createImageElements(imageArray2020, show2020Btn);
-
-// Array 2021 firstOfTheYear
-const imageArray2021firstOfTheYear = [];
-loadImages(`2021/firstoftheyear`, imageArray2021firstOfTheYear, 26);
-createImageElements(imageArray2021firstOfTheYear, show2021firstOfTheYearBtn);
-
-// Array 2021fromThatNight
-const imageArray2021fromThatNight = [];
-loadImages(`2021/fromthatnight`, imageArray2021fromThatNight, 30);
-createImageElements(imageArray2021fromThatNight, show2021fromThatNightBtn);
-
-// Array ^_^
-const imageArray2022diciembre = [];
-loadImages(`2022/^_^`, imageArray2022diciembre, 41);
-createImageElements(imageArray2022diciembre, showDiciembreBtn);
-
-// Array Tigre
-const imageArrayTigre = [];
-loadImages(`2022/tigre`, imageArrayTigre, 42);
-createImageElements(imageArrayTigre, showTigreBtn);
+function removeCurtain() {
+  let curtain = document.querySelector(".curtain");
+  if (previewBox) {
+    curtain.parentNode.removeChild(curtain);
+    previewBox.removeAttribute("id");
+  }else{
+    curtain.parentNode.removeChild(curtain); 
+  }
+  let navbar = document.getElementById("cortina-nav");
+  navbar.classList.remove("hide");
+  let cortina = document.getElementById("cortina");
+  let shpCrt = document.getElementById("preview_shpcrt");
+  cortina.removeChild(shpCrt);
+}
 
 // Function CONSTRUCTORA
 function MyImage(src) {
@@ -178,13 +152,8 @@ function lightbox(index, images) {
   preview();
   previewBox.setAttribute("id", "show-box");
   addCurtain();
+  shpCrtBtnAdd();
 
-  document.addEventListener("click", function (event) {
-    const target = event.target;
-    if (target.classList.contains("curtain")) {
-      removeCurtain();
-    }
-  });
 
   prevBtn.onclick = function () {
     index--;
@@ -258,13 +227,43 @@ function lightbox(index, images) {
 })
 }
 
-// Functions for curtain
-function addCurtain() {
-  let curtain = document.createElement("div");
-  let navbar = document.getElementById("cortina-nav");
-  curtain.classList.add("curtain", "z-1");
-  let cortina = document.getElementById("cortina")
-  cortina.appendChild(curtain);
+//Shopping cart functions
+let btnCartOpen = document.querySelector(".nav_cart");
+
+//Clicks btn and opens cartBox
+btnCartOpen.addEventListener("click", function(){
+  let btnCartPanel = document.querySelector(".cartBox")
+  btnCartPanel.setAttribute("id", "active");
+
+  addCurtain();
+
+//Closes cartBox
+  let closeIcon = document.querySelector("#close_icon");
+  closeIcon.addEventListener("click", function(e){
+  btnCartPanel.removeAttribute("id" , "active");
+  removeCurtain();
+})
+document.addEventListener("click", function (event) {
+  const target = event.target;
+  if (target.classList.contains("cartBox")) {
+    btnCartPanel.removeAttribute("id" , "active");
+    removeCurtain();
+  }
+});
+
+//Creates item elements in cart
+
+
+})
+
+
+
+//Adding to local storage indian
+let items = [];
+
+
+//Adds shopping cart btn to curtain
+function shpCrtBtnAdd () {
   let shpCrt = document.createElement("div");
 
   shpCrt.innerHTML = `<button type="button" class="btn btn-outline-warning z-3 preview_shoppingcrt"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
@@ -274,42 +273,9 @@ function addCurtain() {
 
   shpCrt.setAttribute("id", "preview_shpcrt");
   cortina.appendChild(shpCrt);
-  navbar.classList.add("hide");
 }
 
-function removeCurtain() {
-  let curtain = document.querySelector(".curtain");
-  if (curtain) {
-    curtain.parentNode.removeChild(curtain);
-    previewBox.removeAttribute("id");
-  }
-  let navbar = document.getElementById("cortina-nav");
-  navbar.classList.remove("hide");
-  let cortina = document.getElementById("cortina");
-  let shpCrt = document.getElementById("preview_shpcrt");
-  cortina.removeChild(shpCrt);
-}
 
-//Shopping Cart function
-window.onload = () => {
-  
-  for (let i = 0; i < localStorage.length; i++) {
-    let clave = localStorage.key(i);
-    let prodImg = JSON.parse(localStorage.getItem(clave));
-    let row = document.createElement("div");
-    row.classList.add("row");
-    let sectionCart = document.querySelector("#section_cart");
-    sectionCart.appendChild(row);
-    let col = document.createElement("div");
-    col.classList.add("col");
-    row.appendChild(col);
-    let img = document.createElement("img");
-    img.className = "prints_cart_img";
-    img.setAttribute("src", prodImg);
-    col.appendChild(img);
-   
-  }
-}
 
 // document.addEventListener("DOMContentLoaded", function(){
 //   Swal.fire({
@@ -323,3 +289,60 @@ window.onload = () => {
 //     }
 //   })
 // })
+
+// DOM variables
+let asideContenedor = document.getElementsByTagName("aside");
+let containerGaleria = document.querySelector("#galeria");
+let sectionGaleria = document.querySelector("#titulo-container");
+let showFavouritesBtn = document.getElementById("button_favourites");
+const previewBox = document.querySelector(".preview-box");
+const previewImg = previewBox.querySelector(".imageClass");
+let prevBtn = document.querySelector(".prev");
+let nextBtn = document.querySelector(".next");
+let cartNavBtn = document.querySelector(".nav_cart");
+let contenedorPortfolio = document.querySelector("#contenedor_portfolio");
+
+
+// Botones Aside
+let show2020Btn = document.getElementById("show_button2020");
+let show2021fromThatNightBtn = document.getElementById("2021_fromthatnight_btn");
+let show2021firstOfTheYearBtn = document.getElementById("2021_firstoftheyear_btn");
+let showDiciembreBtn = document.getElementById("^_^");
+let showTigreBtn = document.getElementById("tigre");
+
+// Array Favourites
+const imageArrayFavourites = [];
+
+// ^_^ imgs
+loadFavImgs(`2022/^_^`, 1); loadFavImgs(`2022/^_^`,3 );loadFavImgs(`2022/^_^`, 2);loadFavImgs(`2022/^_^`, 4);loadFavImgs(`2022/^_^`, 5);loadFavImgs(`2022/^_^`, 8);loadFavImgs(`2022/^_^`, 11);loadFavImgs(`2022/^_^`, 13);loadFavImgs(`2022/^_^`, 41);loadFavImgs(`2022/^_^`, 26);loadFavImgs(`2022/^_^`, 31);loadFavImgs(`2022/^_^`, 40);
+
+//Tigre imgs
+loadFavImgs(`2022/tigre`,);
+
+createFavImages(imageArrayFavourites);
+createImageElements(imageArrayFavourites, showFavouritesBtn);
+
+// Array 2020
+const imageArray2020 = [];
+loadImages(`2020`, imageArray2020, 37);
+createImageElements(imageArray2020, show2020Btn);
+
+// Array 2021 firstOfTheYear
+const imageArray2021firstOfTheYear = [];
+loadImages(`2021/firstoftheyear`, imageArray2021firstOfTheYear, 26);
+createImageElements(imageArray2021firstOfTheYear, show2021firstOfTheYearBtn);
+
+// Array 2021fromThatNight
+const imageArray2021fromThatNight = [];
+loadImages(`2021/fromthatnight`, imageArray2021fromThatNight, 30);
+createImageElements(imageArray2021fromThatNight, show2021fromThatNightBtn);
+
+// Array ^_^
+const imageArray2022diciembre = [];
+loadImages(`2022/^_^`, imageArray2022diciembre, 41);
+createImageElements(imageArray2022diciembre, showDiciembreBtn);
+
+// Array Tigre
+const imageArrayTigre = [];
+loadImages(`2022/tigre`, imageArrayTigre, 42);
+createImageElements(imageArrayTigre, showTigreBtn);
